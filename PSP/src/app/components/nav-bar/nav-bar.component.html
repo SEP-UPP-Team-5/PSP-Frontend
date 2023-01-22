@@ -1,0 +1,7 @@
+<nav class="navbar navbar-light justify-content-between">
+    <a class="navbar-brand">PSP</a>
+    <div>
+        <button *ngIf="btnHome" class="btn" type="submit" (click)="goToHome()">Home</button>
+        <button *ngIf="btnSubscriptions" class="btn" type="submit" (click)="goToSubscriptions()">Subscriptions</button>
+    </div>
+</nav>
