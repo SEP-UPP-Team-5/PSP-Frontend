@@ -1,0 +1,49 @@
+.background {    
+    background-image: url("/assets/images/cards.webp");
+    background-size: cover;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    color: #393D3F;
+    padding: 20px;
+}
+
+.table {
+    margin: 0 auto;
+    width: 50%;
+    border: none;
+    background-color: #546A7B;
+    color: white;
+}
+
+tr {
+    border: none;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+td {
+    border: none;
+}
+
+th {
+    border: none;
+}
+
+thead {
+    background-color: #5B7E8D;
+}
+
+.btn {
+    background-color: #94ACAC;
+    color: white;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #5B7E8D;
+}

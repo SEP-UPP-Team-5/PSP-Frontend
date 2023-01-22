@@ -10,7 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { SubscriptionTableComponent } from './pages/landing-page/subscription-table/subscription-table.component';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,6 @@ import { SubscriptionTableComponent } from './pages/landing-page/subscription-ta
     LandingPageComponent,
     FooterComponent,
     NavBarComponent,
-    SubscriptionTableComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +25,8 @@ import { SubscriptionTableComponent } from './pages/landing-page/subscription-ta
     NgbModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
