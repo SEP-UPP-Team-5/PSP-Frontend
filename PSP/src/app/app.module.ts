@@ -11,6 +11,13 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { FooterComponent } from './components/footer/footer.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {MatTableModule} from '@angular/material/table';
+import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ViewDialogComponent } from './pages/subscriptions/view-dialog/view-dialog.component';
+import { AddDialogComponent } from './pages/subscriptions/add-dialog/add-dialog.component';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -18,6 +25,8 @@ import {MatTableModule} from '@angular/material/table';
     LandingPageComponent,
     FooterComponent,
     NavBarComponent,
+    ViewDialogComponent,
+    AddDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +35,12 @@ import {MatTableModule} from '@angular/material/table';
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule,
+    MatIconModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

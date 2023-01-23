@@ -1,0 +1,81 @@
+h2 {
+    padding: 30px;
+    margin: 0;
+    display: flex;
+    color: #546A7B;
+    font-weight: bold;
+    justify-content: flex-end;
+}
+
+.bttnX {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    margin-top: 1%;
+    margin-right: 1%;
+    font-size: 18px;
+    color: white;
+}
+
+i {
+    margin-top: 2%;
+    font-size: 68px;
+    color: white;
+    background-color: #546A7B;
+    padding: 50px;
+    border-radius: 50%;
+}
+
+mat-card {
+    width: 400px;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    background-color: #94ACAC;
+}
+
+mat-card-content {
+    display: flex;
+}
+
+.btn-content {
+    margin-right: 3%;
+    border-radius: 10px;
+    width: 30px;
+    color: white;
+    background-color: #393D3F;
+    border: none;
+}
+
+.page {
+    background-color: rgb(228, 228, 228);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.btn-buttons {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: #546A7B;
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 2%;
+}
+
+.btn-buttons:hover {
+    background-color: #393D3F;
+    color: white;
+}
