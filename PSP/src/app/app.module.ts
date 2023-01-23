@@ -17,7 +17,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ViewDialogComponent } from './pages/subscriptions/view-dialog/view-dialog.component';
 import { AddDialogComponent } from './pages/subscriptions/add-dialog/add-dialog.component';
-import {MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {MatInputModule} from '@angular/material/input';
     MatIconModule,
     MatSnackBarModule,
     MatDialogModule,
-    MatInputModule
+    MatInputModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
