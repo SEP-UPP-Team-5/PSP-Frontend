@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { MethodDto } from 'src/model/payment-method-dto';
 import { SubscriptionDto } from 'src/model/subscription-dto';
+import { PaymentService } from 'src/services/payment.service';
 import { SubscriptionService } from 'src/services/subscription.service';
 import { AddDialogComponent } from './add-dialog/add-dialog.component';
 import { ViewDialogComponent } from './view-dialog/view-dialog.component';
@@ -15,10 +17,12 @@ import { ViewDialogComponent } from './view-dialog/view-dialog.component';
 export class SubscriptionsComponent implements OnInit {
 
   public webShops: any;
+  public method: MethodDto = new MethodDto();
 
   constructor(private router: Router,
     public dialog: MatDialog,
     private subscriptionService: SubscriptionService,
+    private paymentService: PaymentService,
     private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
@@ -30,6 +34,16 @@ export class SubscriptionsComponent implements OnInit {
       next: (shops: SubscriptionDto[]) => { 
         this.webShops =  shops; 
         console.log(shops);
+      },
+      error: (err) => { console.log(err) }
+    })
+  }
+
+  addMethod(): void {
+    this.paymentService.addNewMethod(this.method).subscribe({
+      next: (res: any) => { 
+        console.log(res);
+        this.snackbar.open("Successfully added Method.", 'OK');
       },
       error: (err) => { console.log(err) }
     })

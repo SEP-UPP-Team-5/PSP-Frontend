@@ -21,10 +21,14 @@
       <div class="input">
         <h2>Add new payment method</h2>
         <div class="form-group mb-4">
-          <input type="text" class="form-control" id="method" aria-describedby="method" placeholder="Method">
+          <label for="method">Method name</label>
+          <input type="text" class="form-control" id="method" [(ngModel)]="method.methodName" aria-describedby="method" placeholder="Method name">
           <small id="method" class="form-text text-muted"></small>
+          <label style="margin-top: 3%;" for="merchant">Merchant</label>
+          <input type="text" class="form-control" id="merchant" [(ngModel)]="method.merchant" aria-describedby="method" placeholder="Merchant">
+          <small id="merchant" class="form-text text-muted"></small>
           <div class="d-flex justify-content-center">
-            <button type="submit" class="btn" style="width: 100px; margin-top: 3%;">
+            <button type="submit" class="btn" (click)="addMethod()" style="width: 100px; margin-top: 6%;">
               Add
             </button>
           </div>
