@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +19,7 @@ import { ViewDialogComponent } from './pages/subscriptions/view-dialog/view-dial
 import { AddDialogComponent } from './pages/subscriptions/add-dialog/add-dialog.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { SubscriptionsComponent } from './pages/subscriptions/subscriptions.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MatInputModule } from '@angular/material/input';
     NavBarComponent,
     ViewDialogComponent,
     AddDialogComponent,
+    SubscriptionsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,6 @@ import { MatInputModule } from '@angular/material/input';
     MatFormFieldModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

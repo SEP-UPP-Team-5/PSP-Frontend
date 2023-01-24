@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { SubscriptionDto } from 'src/model/subscription-dto';
+import { SubscriptionService } from 'src/services/subscription.service';
 import { AddDialogComponent } from './add-dialog/add-dialog.component';
 import { ViewDialogComponent } from './view-dialog/view-dialog.component';
 
@@ -12,12 +14,25 @@ import { ViewDialogComponent } from './view-dialog/view-dialog.component';
 })
 export class SubscriptionsComponent implements OnInit {
 
+  public webShops: any;
+
   constructor(private router: Router,
     public dialog: MatDialog,
+    private subscriptionService: SubscriptionService,
     private snackbar: MatSnackBar) { }
 
   ngOnInit(): void {
-  
+    this.getWebShops();
+  }
+
+  getWebShops(): void {
+    this.subscriptionService.getWebShops().subscribe({
+      next: (shops: SubscriptionDto[]) => { 
+        this.webShops =  shops; 
+        console.log(shops);
+      },
+      error: (err) => { console.log(err) }
+    })
   }
 
   openViewDialog() {

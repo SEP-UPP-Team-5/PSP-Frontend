@@ -3,6 +3,7 @@ export const AppConstants = {
 
     SUBSCRIPTION : {
        ADD: '/subscriptions/create',
+       GET: '/subscriptions/getAll',
        METHODS: '/subscriptions/subscribedMethods/',
        ADD_METHOD: '/subscriptions/addMethod/'
    },

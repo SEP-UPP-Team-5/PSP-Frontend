@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { SubscriptionDto } from 'src/model/subscription-dto';
 import { AppConstants } from 'src/utils/constants';
 
@@ -17,4 +17,12 @@ export class SubscriptionService {
        return item;
       }))
   }
+
+  getWebShops(): Observable<SubscriptionDto[]> {
+    const apiUrl = AppConstants.API_HOST + AppConstants.SUBSCRIPTION.GET;
+    return this.http.get<SubscriptionDto[]>(apiUrl).pipe(map((data: SubscriptionDto[]) => {
+      return data && data.map((elem: SubscriptionDto) => new SubscriptionDto(elem)) || [];
+    }))
+  }
+  
 }
