@@ -74,11 +74,11 @@ export class SubscriptionsComponent implements OnInit {
     });
   }
 
-  openAddDialog() {
+  openAddDialog(id: any) {
     const dialogRef = this.dialog.open(AddDialogComponent, {
       width: '500px',
       autoFocus: false,
-      data: {}
+      data: {methods: this.methods, webShopId: id}
     });
 
     dialogRef.afterClosed().subscribe(result => {

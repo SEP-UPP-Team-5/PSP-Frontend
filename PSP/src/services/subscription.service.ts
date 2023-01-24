@@ -24,5 +24,12 @@ export class SubscriptionService {
       return data && data.map((elem: SubscriptionDto) => new SubscriptionDto(elem)) || [];
     }))
   }
+
+  addMethodToWebShop(webShopId: any, methodId: any, input?: any) {
+    const apiUrl = AppConstants.API_HOST + AppConstants.SUBSCRIPTION.ADD_METHOD;
+    return this.http.post(apiUrl+webShopId + '/' + methodId, input).pipe(map((item: any) => {
+      return item;
+     }))
+  }
   
 }

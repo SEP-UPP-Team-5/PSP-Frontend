@@ -20,6 +20,7 @@ import { AddDialogComponent } from './pages/subscriptions/add-dialog/add-dialog.
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { SubscriptionsComponent } from './pages/subscriptions/subscriptions.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { SubscriptionsComponent } from './pages/subscriptions/subscriptions.comp
     MatSnackBarModule,
     MatDialogModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
