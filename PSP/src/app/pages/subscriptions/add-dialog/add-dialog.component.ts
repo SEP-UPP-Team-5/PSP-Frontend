@@ -38,6 +38,8 @@ export class AddDialogComponent {
       next: (res: any) => { 
         console.log(res);
         this.snackbar.open("Successfully added Method.", 'OK');
+        this.dialogRef.close();
+        window.location.reload();
       },
       error: (err) => { console.log(err) }
     })
