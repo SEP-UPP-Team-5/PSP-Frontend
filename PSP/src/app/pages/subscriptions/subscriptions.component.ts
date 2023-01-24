@@ -17,6 +17,7 @@ import { ViewDialogComponent } from './view-dialog/view-dialog.component';
 export class SubscriptionsComponent implements OnInit {
 
   public webShops: any;
+  public methods: any;
   public method: MethodDto = new MethodDto();
 
   constructor(private router: Router,
@@ -27,6 +28,7 @@ export class SubscriptionsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getWebShops();
+    this.getMethods();
   }
 
   getWebShops(): void {
@@ -39,10 +41,21 @@ export class SubscriptionsComponent implements OnInit {
     })
   }
 
+  getMethods(): void {
+    this.paymentService.getPaymentMethods().subscribe({
+      next: (res: MethodDto[]) => { 
+        this.methods =  res; 
+        console.log(res);
+      },
+      error: (err) => { console.log(err) }
+    })
+  }
+
   addMethod(): void {
     this.paymentService.addNewMethod(this.method).subscribe({
       next: (res: any) => { 
         console.log(res);
+        this.getMethods();
         this.snackbar.open("Successfully added Method.", 'OK');
       },
       error: (err) => { console.log(err) }

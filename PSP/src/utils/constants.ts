@@ -8,6 +8,7 @@ export const AppConstants = {
        ADD_METHOD: '/subscriptions/addMethod/'
    },
    METHOD : {
-       ADD: '/paymentMethod/add'
+       ADD: '/paymentMethod/add',
+       GET: '/paymentMethod/getAll',
    }
 }
