@@ -11,6 +11,7 @@ import { SubscriptionService } from 'src/services/subscription.service';
 export class AddDialogComponent {
 
   public selectedMethod: any;
+  public filteredMethods: any[] = [];
 
   constructor(
     public injector: Injector,
@@ -21,10 +22,19 @@ export class AddDialogComponent {
   ) {}
 
   ngOnInit(): void {
+    this.filterMethods();
+  }
+
+  filterMethods() {
+    this.filteredMethods= this.data.methods.filter((cv: any) =>{
+      return !this.data.webShop.methods.find(function(e: any){
+          return e.id == cv.id;
+      });
+    });
   }
 
   addMethodToWebShop(methodId: any): void {
-    this.subscriptionService.addMethodToWebShop(this.data.webShopId, methodId).subscribe({
+    this.subscriptionService.addMethodToWebShop(this.data.webShop.id, methodId).subscribe({
       next: (res: any) => { 
         console.log(res);
         this.snackbar.open("Successfully added Method.", 'OK');

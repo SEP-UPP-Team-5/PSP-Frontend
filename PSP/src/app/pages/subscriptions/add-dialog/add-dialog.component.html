@@ -2,9 +2,9 @@
     <h2>Payment methods</h2>
     <mat-dialog-content>
         <mat-form-field style="width: 300px;" appearance="outline">
-            <mat-label>Favorite food</mat-label>
+            <mat-label>Method</mat-label>
             <mat-select (selectionChange)="onChange($event.value)">
-                <mat-option *ngFor="let method of data.methods" [value]="method.id">
+                <mat-option *ngFor="let method of filteredMethods" [value]="method.id">
                     {{method.methodName}}
                 </mat-option>
             </mat-select>

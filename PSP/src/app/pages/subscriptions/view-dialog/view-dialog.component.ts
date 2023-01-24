@@ -15,7 +15,7 @@ export class ViewDialogComponent {
   ) {}
 
   ngOnInit(): void {
-    
+    console.log(this.data.webShop)
   }
 
   closeDialog() {

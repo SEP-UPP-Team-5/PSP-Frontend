@@ -62,11 +62,11 @@ export class SubscriptionsComponent implements OnInit {
     })
   }
 
-  openViewDialog() {
+  openViewDialog(webShop: any) {
     const dialogRef = this.dialog.open(ViewDialogComponent, {
       width: '500px',
       autoFocus: false,
-      data: {}
+      data: {webShop: webShop}
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -74,11 +74,11 @@ export class SubscriptionsComponent implements OnInit {
     });
   }
 
-  openAddDialog(id: any) {
+  openAddDialog(webShop: any) {
     const dialogRef = this.dialog.open(AddDialogComponent, {
       width: '500px',
       autoFocus: false,
-      data: {methods: this.methods, webShopId: id}
+      data: {methods: this.methods, webShop: webShop}
     });
 
     dialogRef.afterClosed().subscribe(result => {
