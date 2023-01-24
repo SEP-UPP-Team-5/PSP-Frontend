@@ -21,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { SubscriptionsComponent } from './pages/subscriptions/subscriptions.component';
 import {MatSelectModule} from '@angular/material/select';
+import { PaymentMethodsComponent } from './pages/payment-methods/payment-methods.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {MatSelectModule} from '@angular/material/select';
     NavBarComponent,
     ViewDialogComponent,
     AddDialogComponent,
-    SubscriptionsComponent
+    SubscriptionsComponent,
+    PaymentMethodsComponent
   ],
   imports: [
     BrowserModule,
