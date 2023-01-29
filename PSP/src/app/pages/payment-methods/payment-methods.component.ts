@@ -41,6 +41,7 @@ export class PaymentMethodsComponent {
             window.location.href = res.approvalUrl;
           } else if(method.methodName == 'Bitcoin'){
             console.log(res, 'Bitcoin');
+            window.location.href = 'http://localhost:4200/confirmation'
           } else if(method.methodName == 'Credit Card'){
             console.log(res, 'Card');
           } else if(method.methodName == 'QR Code'){
