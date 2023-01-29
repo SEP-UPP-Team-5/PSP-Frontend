@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-payment-methods',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class PaymentMethodsComponent {
 
+  public id: any;
+
+  constructor(private router: Router,
+    private route: ActivatedRoute
+    ) { }
+
+    ngOnInit(): void {
+      this.id = this.route.snapshot.paramMap.get('id')
+      console.log(this.id);
+    }
 }
