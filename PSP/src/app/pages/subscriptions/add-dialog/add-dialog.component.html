@@ -1,0 +1,18 @@
+<div class="page">
+    <h2>Payment methods</h2>
+    <mat-dialog-content>
+        <mat-form-field style="width: 300px;" appearance="outline">
+            <mat-label>Method</mat-label>
+            <mat-select (selectionChange)="onChange($event.value)">
+                <mat-option *ngFor="let method of filteredMethods" [value]="method.id">
+                    {{method.methodName}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="buttons">
+            <button class="btn-buttons" (click)="addMethodToWebShop(selectedMethod)">Save</button>
+            <button class="btn-buttons" (click)="closeDialog()">Cancel</button>
+        </div>
+    </mat-dialog-content>    
+</div>

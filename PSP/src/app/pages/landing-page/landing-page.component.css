@@ -1,0 +1,73 @@
+*{
+    color: #546A7B;
+}
+
+h1 {
+    color: #FDFDFF;
+}
+
+span {
+    color: #62929E;
+}
+
+.text {
+    color: #FDFDFF;
+}
+
+.background-radial-gradient {
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control:focus {
+    border-color: #546A7B;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(132, 117, 119, 0.75);
+}
+
+.form-check-input:focus {
+    border-color: #546A7B;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(132, 117, 119, 0.75);
+}
+
+.form-check-input {
+    background-color: #546A7B;
+    border: #546A7B;
+}
+
+.btn {
+    font-size: 18px;
+    background-color: #94ACAC;
+    width: 30%;
+}
+
+.btn:hover {
+    background-color: #546A7B;
+    color: white;
+}
+
+.background-radial-gradient::before {    
+      content: "";
+      background-image: url("/assets/images/cards.webp");
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.8;
+}
+
+.card {
+    position: relative;
+    background-color: rgba(229, 230, 228, 0.9);
+    border: none;
+}
+
+h2,p {
+    color: #546A7B;
+}
+

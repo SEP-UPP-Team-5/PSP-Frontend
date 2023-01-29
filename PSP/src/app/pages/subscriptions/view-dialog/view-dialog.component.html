@@ -1,0 +1,15 @@
+<div class="page">
+    <h2>Payment methods</h2>
+    <mat-dialog-content>
+        <mat-card *ngFor="let item of data.webShop.methods">
+            <mat-card-content>
+                <button class="btn-content">X</button>
+                {{item.methodName}}
+            </mat-card-content>
+        </mat-card>
+        <div class="buttons">
+            <!-- <button class="btn-buttons">Add new method</button> -->
+            <button class="btn-buttons" (click)="closeDialog()">Cancel</button>
+        </div>
+    </mat-dialog-content>    
+</div>

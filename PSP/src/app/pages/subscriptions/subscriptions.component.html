@@ -1,0 +1,37 @@
+<div class="background">
+    <h1>Subscripted WebShops</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No. </th>
+            <th scope="col">WebShop</th>
+            <th scope="col">New</th>
+            <th scope="col">Methods</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of webShops, index as i">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{item.webShopURI}}</td>
+            <td><button class="btn" (click)="openAddDialog(item)">Add method</button></td>
+            <td><button class="btn" (click)="openViewDialog(item)">View</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="input">
+        <h2>Add new payment method</h2>
+        <div class="form-group mb-4">
+          <label for="method">Method name</label>
+          <input type="text" class="form-control" id="method" [(ngModel)]="method.methodName" aria-describedby="method" placeholder="Method name">
+          <small id="method" class="form-text text-muted"></small>
+          <label style="margin-top: 3%;" for="merchant">Merchant</label>
+          <input type="text" class="form-control" id="merchant" [(ngModel)]="method.merchant" aria-describedby="method" placeholder="Merchant">
+          <small id="merchant" class="form-text text-muted"></small>
+          <div class="d-flex justify-content-center">
+            <button type="submit" class="btn" (click)="addMethod()" style="width: 100px; margin-top: 6%;">
+              Add
+            </button>
+          </div>
+        </div>
+      </div>
+</div>
