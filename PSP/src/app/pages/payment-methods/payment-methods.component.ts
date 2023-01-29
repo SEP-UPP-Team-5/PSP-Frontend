@@ -20,7 +20,7 @@ export class PaymentMethodsComponent {
 
     ngOnInit(): void {
       this.id = this.route.snapshot.paramMap?.get('id')
-      console.log(this.id);
+      console.log(this.id, "TRANSACTION ID FROM URL");
       this.getMethods();
     }
 
@@ -33,7 +33,21 @@ export class PaymentMethodsComponent {
       })
     }
 
-    onClick(value: any) {
-      console.log(value);
+    sendTransactionInfo(method: any): void {
+      this.paymentInfoService.sendTransactionInfo(this.id, method.id).subscribe({
+        next: (res: any) => { 
+          if(method.methodName == 'PayPal'){
+            console.log(res, 'PayPal');
+            window.location.href = res.approvalUrl;
+          } else if(method.methodName == 'Bitcoin'){
+            console.log(res, 'Bitcoin');
+          } else if(method.methodName == 'Card'){
+            console.log(res, 'Card');
+          } else if(method.methodName == 'QR Code'){
+            console.log(res, 'QR');
+          } 
+        },
+        error: (err) => { console.log(err) }
+      })
     }
 }

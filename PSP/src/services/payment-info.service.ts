@@ -18,4 +18,11 @@ export class PaymentInfoService {
       return data && data.map((elem: MethodDto) => new MethodDto(elem)) || [];
     }))
   }
+
+  sendTransactionInfo(transactionId: any, methodId: any) {
+    const apiUrl = AppConstants.API_HOST + AppConstants.PAYMENT.SEND;
+    return this.http.post(apiUrl + transactionId + '/' + methodId, {}).pipe(map((item: any) => {
+       return item;
+      }))
+  }
 }

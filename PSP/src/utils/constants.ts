@@ -12,6 +12,7 @@ export const AppConstants = {
        GET: '/paymentMethod/getAll',
    },
    PAYMENT : {
-        GET_METHODS: '/paymentInfo/paymentMethods/'
+        GET_METHODS: '/paymentInfo/paymentMethods/',
+        SEND: '/paymentInfo/send/'
    }
 }
