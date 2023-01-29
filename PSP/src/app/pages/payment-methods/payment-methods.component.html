@@ -1,14 +1,10 @@
 <div class="cont">
-    <div class="image">
-        <img src="assets/images/card.png">
-    </div>
-    <div class="image">
-        <img src="assets/images/qr.png">
-    </div>
-    <div class="image">
-        <img src="assets/images/paypal.png">
-    </div>
-    <div class="image">
-        <img src="assets/images/bitcoin.png">
+    <div class="image" *ngFor="let method of methods">
+        <button (click)="sendTransactionInfo(method)">
+            <img src="assets/images/card.png" *ngIf="method.methodName == 'Credit Card'">
+            <img src="assets/images/qr.png" *ngIf="method.methodName == 'QR Code'">
+            <img src="assets/images/paypal.png" *ngIf="method.methodName == 'PayPal'">
+            <img src="assets/images/bitcoin.png" *ngIf="method.methodName == 'Bitcoin'">
+        </button>
     </div>
 </div>
