@@ -24,8 +24,14 @@
           <label for="method">Method name</label>
           <input type="text" class="form-control" id="method" [(ngModel)]="method.methodName" aria-describedby="method" placeholder="Method name">
           <small id="method" class="form-text text-muted"></small>
-          <label style="margin-top: 3%;" for="merchant">Merchant</label>
-          <input type="text" class="form-control" id="merchant" [(ngModel)]="method.merchant" aria-describedby="method" placeholder="Merchant">
+          <label style="margin-top: 3%;" for="merchant">Merchant ID</label>
+          <input type="text" class="form-control" id="merchant" [(ngModel)]="method.merchant_id" aria-describedby="method" placeholder="Merchant">
+          <small id="merchant" class="form-text text-muted"></small>
+          <label style="margin-top: 3%;" for="merchant">Merchant password</label>
+          <input type="text" class="form-control" id="merchant" [(ngModel)]="method.merchant_password" aria-describedby="method" placeholder="Merchant">
+          <small id="merchant" class="form-text text-muted"></small>
+          <label style="margin-top: 3%;" for="merchant">Method Service Name</label>
+          <input type="text" class="form-control" id="merchant" [(ngModel)]="method.methodServiceName" aria-describedby="method" placeholder="Merchant">
           <small id="merchant" class="form-text text-muted"></small>
           <div class="d-flex justify-content-center">
             <button type="submit" class="btn" (click)="addMethod()" style="width: 100px; margin-top: 6%;">

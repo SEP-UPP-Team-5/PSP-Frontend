@@ -57,8 +57,10 @@ export class SubscriptionsComponent implements OnInit {
         console.log(res);
         this.getMethods();
         this.snackbar.open("Successfully added Method.", 'OK');
-        this.method.merchant = '';
+        this.method.merchant_id = '';
         this.method.methodName = '';
+        this.method.merchant_password = '';
+        this.method.methodServiceName = '';
       },
       error: (err) => { console.log(err) }
     })

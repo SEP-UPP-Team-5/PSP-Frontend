@@ -32,6 +32,21 @@
                     <input type="text" class="form-control" [(ngModel)]="webShop.webShopURI" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                     <small id="emailHelp" class="form-text text-muted"></small>
                   </div>
+                  <div class="form-group mb-4">
+                    <label for="exampleInputEmail1">Success URL</label>
+                    <input type="text" class="form-control" [(ngModel)]="webShop.successUrl" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="exampleInputEmail1">Failed URL</label>
+                    <input type="text" class="form-control" [(ngModel)]="webShop.failedUrl" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                  </div>
+                  <div class="form-group mb-4">
+                    <label for="exampleInputEmail1">Error URL</label>
+                    <input type="text" class="form-control" [(ngModel)]="webShop.errorUrl" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                    <small id="emailHelp" class="form-text text-muted"></small>
+                  </div>
     
                   <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-lg btn-block mb-4" (click)="subscribeWebShop()">
