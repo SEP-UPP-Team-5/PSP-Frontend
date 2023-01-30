@@ -47,6 +47,7 @@ export class PaymentMethodsComponent {
             window.location.href = res.payment_URL;
           } else if(method.methodName == 'QR Code'){
             console.log(res, 'QR');
+            window.location.href = res.payment_URL;
           } 
         },
         error: (err) => { console.log(err) }
