@@ -44,6 +44,7 @@ export class PaymentMethodsComponent {
             window.location.href = 'http://localhost:4200/confirmation/' + res.order_id
           } else if(method.methodName == 'Credit Card'){
             console.log(res, 'Card');
+            window.location.href = res.payment_URL;
           } else if(method.methodName == 'QR Code'){
             console.log(res, 'QR');
           } 
