@@ -29,10 +29,16 @@ export class LandingPageComponent implements OnInit {
       error => {
         this.snackbar.open("Successfully added WebShop.", 'OK');
         this.webShop.webShopURI = '';
+        this.webShop.successUrl = '';
+        this.webShop.errorUrl = '';
+        this.webShop.failedUrl = '';
       },
       () => {
         this.snackbar.open("Successfully added WebShop.", 'OK');
         this.webShop.webShopURI = '';
+        this.webShop.successUrl = '';
+        this.webShop.errorUrl = '';
+        this.webShop.failedUrl = '';
       }
     )
   }
